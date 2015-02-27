@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+		
+		
+		
+<hibernate-configuration>
+
+			<session-factory>
+					<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+					
+					<!-- initial connection size available -->
+					<property name="hibernate.connection.pool_size">5</property>
+					<property name="hibernate.connection.autocommit">false</property>
+					 
+					 
+					  <!-- General Settings -->
+				      <property name="show_sql">true</property>
+				      <!-- DDL Mode -->
+				      <property name="hbm2ddl.auto">update</property>
+				        
+				      <!-- Mapping class -->
+				      <mapping class="com.student.information.service.Student"/>
+    				  <mapping class="com.student.information.service.Address"/>
+    				  <mapping class="com.student.information.service.Department"/>
+    				  <mapping class="com.student.information.service.DepartmentHead"/>
+					 
+			</session-factory>
+		
+</hibernate-configuration>
